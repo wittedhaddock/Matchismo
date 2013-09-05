@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A28FDA217D8EE3B00FC55D7 /* SetCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A28FDA117D8EE3B00FC55D7 /* SetCard.m */; };
 		1ACE4FC717D8E4C7003199DE /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE4FC617D8E4C7003199DE /* SetViewController.m */; };
 		8431012D17A40E31009E077D /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 8431012C17A40E31009E077D /* Card.m */; };
 		8431013017A40F7A009E077D /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 8431012F17A40F7A009E077D /* Deck.m */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A28FDA017D8EE3B00FC55D7 /* SetCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetCard.h; path = Model/SetCard.h; sourceTree = "<group>"; };
+		1A28FDA117D8EE3B00FC55D7 /* SetCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetCard.m; path = Model/SetCard.m; sourceTree = "<group>"; };
 		1ACE4FC517D8E4C7003199DE /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
 		1ACE4FC617D8E4C7003199DE /* SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetViewController.m; sourceTree = "<group>"; };
 		8431012B17A40E31009E077D /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Model/Card.h; sourceTree = "<group>"; };
@@ -68,6 +71,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A28FD9E17D8EDDA00FC55D7 /* Matching */ = {
+			isa = PBXGroup;
+			children = (
+				8431013117A41218009E077D /* PlayingCard.h */,
+				8431013217A41218009E077D /* PlayingCard.m */,
+				8431013417A4158C009E077D /* PlayingCardDeck.h */,
+				8431013517A4158C009E077D /* PlayingCardDeck.m */,
+			);
+			name = Matching;
+			sourceTree = "<group>";
+		};
+		1A28FD9F17D8EDE600FC55D7 /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				1A28FDA017D8EE3B00FC55D7 /* SetCard.h */,
+				1A28FDA117D8EE3B00FC55D7 /* SetCard.m */,
+			);
+			name = Set;
+			sourceTree = "<group>";
+		};
 		1ACE4FC417D8E493003199DE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,14 +105,12 @@
 		8431012A17A40E16009E077D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1A28FD9F17D8EDE600FC55D7 /* Set */,
+				1A28FD9E17D8EDDA00FC55D7 /* Matching */,
 				8431012B17A40E31009E077D /* Card.h */,
 				8431012C17A40E31009E077D /* Card.m */,
 				8431012E17A40F7A009E077D /* Deck.h */,
 				8431012F17A40F7A009E077D /* Deck.m */,
-				8431013117A41218009E077D /* PlayingCard.h */,
-				8431013217A41218009E077D /* PlayingCard.m */,
-				8431013417A4158C009E077D /* PlayingCardDeck.h */,
-				8431013517A4158C009E077D /* PlayingCardDeck.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -223,6 +244,7 @@
 				8431013317A41218009E077D /* PlayingCard.m in Sources */,
 				8431013617A4158C009E077D /* PlayingCardDeck.m in Sources */,
 				1ACE4FC717D8E4C7003199DE /* SetViewController.m in Sources */,
+				1A28FDA217D8EE3B00FC55D7 /* SetCard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
