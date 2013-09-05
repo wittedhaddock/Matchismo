@@ -14,7 +14,7 @@
     return @[[UIColor greenColor], [UIColor purpleColor], [UIColor redColor]];
 }
 
-+ (NSArray *)allPossibleRanks{
++ (NSArray *)allPossibleDimensions{
     return @[[NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:3]];
 }
 
