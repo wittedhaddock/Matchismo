@@ -125,7 +125,9 @@
     self.flippedUpCards = nil;
     self.deck = nil;
     self.cardsOnScreen = nil;
-    self.score = 0; 
+    self.flipCount = 0;
+    self.score = 0;
+    self.matchDescription.text = nil;
     for(UIButton *button in self.cards){
         Card *card = [self.deck drawRandomCard];
         [self.cardsOnScreen addObject:card];
