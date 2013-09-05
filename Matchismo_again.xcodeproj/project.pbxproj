@@ -71,8 +71,8 @@
 		1ACE4FC417D8E493003199DE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				847E158A17A408C4009622F9 /* MatchismoViewController.m */,
 				847E158917A408C4009622F9 /* MatchismoViewController.h */,
+				847E158A17A408C4009622F9 /* MatchismoViewController.m */,
 				1ACE4FC517D8E4C7003199DE /* SetViewController.h */,
 				1ACE4FC617D8E4C7003199DE /* SetViewController.m */,
 			);

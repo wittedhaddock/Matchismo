@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PlayingCardDeck.h"
 
 @interface SetViewController : UIViewController
 
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cards;
+
 @end
+
