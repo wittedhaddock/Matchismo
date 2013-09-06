@@ -49,11 +49,12 @@
     
 }
 - (IBAction)deal:(UIButton *)sender {
-    NSLog(@"%@", [self.deck drawRandomCard]);
+    self.deck = nil;
+    self.cardsOnScreen = nil;
     for(UIButton *button in self.cards){
-     //   SetCard *aSetCard = (SetCard *)[self.deck drawRandomCard];
-       // [self.cardsOnScreen addObject:aSetCard];
-        //[button setTitle:aSetCard.contents forState:UIControlStateSelected];
+        SetCard *aSetCard = (SetCard *)[self.deck drawRandomCard];
+        [self.cardsOnScreen addObject:aSetCard];
+        [button setTitle:aSetCard.contents forState:UIControlStateSelected];
         
     }
 }
