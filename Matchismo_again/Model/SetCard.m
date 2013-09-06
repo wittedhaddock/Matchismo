@@ -27,11 +27,11 @@
 }
 
 - (NSString *)sequence{
-    NSString *s = [[NSString alloc] init];
-    for(int i = 0; i < [self.dimension integerValue]; i++){
-        [s stringByAppendingString:self.symbol];
+    NSMutableString *s = [[NSMutableString alloc] init];
+   for(int i = 0; i < [self.dimension integerValue]; i++){
+       [s stringByAppendingString:self.symbol];
     }
-    return s;
+    return [NSString stringWithString:s];
 }
 
 - (void)setSymbol:(NSString *)symbol{
@@ -60,7 +60,7 @@
 
 
 - (NSDictionary *)properties{
-    return @{@"symbol": self.symbol, @"dimension": self.dimension, @"color": self.color, @"shading":self.shading};
+    return @{@"display": [self sequence], @"color": self.color, @"shading":self.shading};
 }
 
 - (void)applyPropertiesToButton:(UIButton *)button{

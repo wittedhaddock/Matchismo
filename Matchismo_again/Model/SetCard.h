@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSNumber *dimension;
 @property (strong, nonatomic) UIColor *color;
 @property (strong, nonatomic) UIColor *shading;
+- (void)applyPropertiesToButton:(UIButton *)button;
 + (NSArray *)allPossibleDimensions;
 + (NSArray *)allPossibleSymbols;
 + (NSArray *)allPossibleShadings;

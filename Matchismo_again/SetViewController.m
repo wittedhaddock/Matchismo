@@ -54,7 +54,8 @@
     for(UIButton *button in self.cards){
         SetCard *aSetCard = (SetCard *)[self.deck drawRandomCard];
         [self.cardsOnScreen addObject:aSetCard];
-        [button setTitle:aSetCard.contents forState:UIControlStateSelected];
+        [aSetCard applyPropertiesToButton:button];
+        NSLog(@"%@", aSetCard.properties);
         
     }
 }
