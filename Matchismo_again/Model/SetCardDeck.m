@@ -15,8 +15,9 @@
     if(self = [super init]){
         for(UIColor *color in [SetCard allPossibleColors]){
             for(UIColor *shading in [SetCard allPossibleShadings]){
-                for(NSString *symbol in [SetCard allPossibleSymbols]){
-                    for(NSNumber *dimension in [SetCard allPossibleDimensions]){
+                for(NSNumber *dimension in [SetCard allPossibleDimensions]){
+                    for(NSString *symbol in [SetCard allPossibleSymbols]){
+
                         SetCard *card = [[SetCard alloc] init];
                         card.color = color;
                         card.shading = shading;
@@ -27,8 +28,7 @@
                 }
             }
         }
-    }
-    return self;
+    }    return self;
 }
 
 

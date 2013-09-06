@@ -26,6 +26,14 @@
     return @[@"▲",  @"●",  @"■"];
 }
 
+- (NSString *)sequence{
+    NSString *s = [[NSString alloc] init];
+    for(int i = 0; i < [self.dimension integerValue]; i++){
+        [s stringByAppendingString:self.symbol];
+    }
+    return s;
+}
+
 - (void)setSymbol:(NSString *)symbol{
     if ([[SetCard allPossibleSymbols] containsObject:symbol]) {
         _symbol = symbol;
@@ -50,16 +58,15 @@
     }
 }
 
-- (NSString *)contents{
-    return [NSString stringWithFormat:@"%@%@%@%@",self.symbol, self.dimension, self.color, self.shading ];
-    
+
+- (NSDictionary *)properties{
+    return @{@"symbol": self.symbol, @"dimension": self.dimension, @"color": self.color, @"shading":self.shading};
 }
 
-- (NSAttributedString *)properties{
-    if (!_properties) {
-        _properties = [[NSAttributedString alloc] initWithString:[self contents]];
-    }
-    return _properties;
+- (void)applyPropertiesToButton:(UIButton *)button{
+    [button setTitle:[self sequence] forState:UIControlStateNormal|UIControlStateSelected];
+    [button setTitleColor:self.color forState:UIControlStateSelected|UIControlStateNormal];
+    [button setBackgroundColor:self.shading];
 }
 
 @end
