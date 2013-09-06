@@ -28,25 +28,25 @@
 
 - (void)setSymbol:(NSString *)symbol{
     if ([[SetCard allPossibleSymbols] containsObject:symbol]) {
-        self.symbol = symbol;
+        _symbol = symbol;
     }
 }
 
 - (void)setDimension:(NSNumber *)dimension{
     if([[SetCard allPossibleDimensions] containsObject:dimension]){
-        self.dimension = dimension;
+        _dimension = dimension;
     }
 }
 
 - (void)setColor:(UIColor *)color{
     if([[SetCard allPossibleColors] containsObject:color]) {
-        self.color = color;
+        _color = color;
     }
 }
 
 - (void)setShading:(UIColor *)shading{
     if([[SetCard allPossibleShadings] containsObject:shading]) {
-        self.shading = shading;
+        _shading = shading;
     }
 }
 

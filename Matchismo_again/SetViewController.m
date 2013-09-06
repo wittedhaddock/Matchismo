@@ -10,18 +10,19 @@
 #import "SetCard.h"
 
 @interface SetViewController ()
-@property (strong, nonatomic) PlayingCardDeck *deck;
+@property (strong, nonatomic) SetCardDeck *deck;
 @property (strong, nonatomic) NSMutableArray *cardsOnScreen;
 @end
 
 @implementation SetViewController
 
--(PlayingCardDeck *)deck{
+-(SetCardDeck *)deck{
     if (!_deck) {
-        _deck = [[PlayingCardDeck alloc] init];
+        _deck = [[SetCardDeck alloc] init];
     }
     return _deck;
 }
+
 -(NSMutableArray *)cardsOnScreen{
     if(!_cardsOnScreen){
         _cardsOnScreen = [[NSMutableArray alloc]init];
@@ -48,10 +49,11 @@
     
 }
 - (IBAction)deal:(UIButton *)sender {
-    self.cardsOnScreen = nil;
-    self.deck = nil;
+    NSLog(@"%@", [self.deck drawRandomCard]);
     for(UIButton *button in self.cards){
-        
+     //   SetCard *aSetCard = (SetCard *)[self.deck drawRandomCard];
+       // [self.cardsOnScreen addObject:aSetCard];
+        //[button setTitle:aSetCard.contents forState:UIControlStateSelected];
         
     }
 }
