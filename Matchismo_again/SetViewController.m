@@ -7,7 +7,8 @@
 //
 
 #import "SetViewController.h"
-#import "PlayingCard.h"
+#import "SetCard.h"
+
 @interface SetViewController ()
 @property (strong, nonatomic) PlayingCardDeck *deck;
 @property (strong, nonatomic) NSMutableArray *cardsOnScreen;
@@ -50,12 +51,8 @@
     self.cardsOnScreen = nil;
     self.deck = nil;
     for(UIButton *button in self.cards){
-        PlayingCard *randomCard = (PlayingCard *)[self.deck drawRandomCard];
-        if(![self.cardsOnScreen containsObject:randomCard]){
-            [self.cardsOnScreen addObject:randomCard];
-            NSString *title = randomCard.contents;
-            [button setTitle:title forState:UIControlStateSelected];
-        }
+        
+        
     }
 }
 

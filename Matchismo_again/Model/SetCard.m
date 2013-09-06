@@ -55,4 +55,11 @@
     
 }
 
+- (NSAttributedString *)properties{
+    if (!_properties) {
+        _properties = [[NSAttributedString alloc] initWithString:[self contents]];
+    }
+    return _properties;
+}
+
 @end

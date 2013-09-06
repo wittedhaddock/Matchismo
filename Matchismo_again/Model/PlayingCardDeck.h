@@ -9,6 +9,7 @@
 #import "Deck.h"
 
 @interface PlayingCardDeck : Deck
+
 @property (strong, nonatomic, readonly) NSMutableArray *matchHistory;
 
 - (void)addMatchHistoryEntity:(NSString *)entity;
