@@ -55,7 +55,6 @@
         SetCard *aSetCard = (SetCard *)[self.deck drawRandomCard];
         [self.cardsOnScreen addObject:aSetCard];
         [aSetCard applyPropertiesToButton:button];
-        NSLog(@"%@", aSetCard.properties);
         
     }
 }
